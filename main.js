@@ -61,14 +61,14 @@ button.addEventListener("click", function () {
 
   //creamos objeto constructor para guardar las diferentes consultas en un array de objetos
   class Result{
-    constructor(value,plan,finalResultDecimal){
-      this.value=value;
+    constructor(result,plan,finalResultDecimal){
+      this.result=result;
       this.plan=plan;
       this.finalResultDecimal=finalResultDecimal;
     }
   }
 
-const resultNew = new Result(value,plan,finalResultDecimal);
+const resultNew = new Result(result,plan,finalResultDecimal);
 consult.push(resultNew);//guardar los valores en array
 
 console.log(consult);//mostrar los valores guardados por consola para asegurarnos que se esta recopilando la informacion
@@ -77,7 +77,7 @@ console.log(consult);//mostrar los valores guardados por consola para asegurarno
 showConsult = prompt(`Para conocer todas sus consultas ingrese: SI\nPara salir ingrese: NO`).toLowerCase(); 
 if (showConsult=='si'){
  consult.forEach((item)=>{
-  alert(`Su Plan es ${item.plan} cutotas\nPagará un valor total de $${item.value}\n$${item.finalResultDecimal} pesos por cada cuota.`);
+  alert(`Su Plan es ${item.plan} cutotas\nPagará un valor total de $${item.result}\n$${item.finalResultDecimal} pesos por cada cuota.`);
  })
 }else if(showConsult=='no'){
   alert('Muchas Gracias Por su visita');
